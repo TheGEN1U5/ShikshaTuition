@@ -4,37 +4,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shiksha Tuition Center</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/7d37d5d745.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="js/write-and-delete-master/dist/lib.js"></script>
+    <script type="text/javascript">
+        (function() {
+              // https://dashboard.emailjs.com/admin/integration
+              emailjs.init("user_XAc3BDZ0iRBpKvt21ckjZ");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+              document.getElementById('contact-form').addEventListener('submit', function(event) {
+                 event.preventDefault();
+                 // these IDs from the previous steps
+                 var form = document.querySelector('#contact-form')
+                 emailjs.sendForm('service_td6g3ue', 'template_9qu0qns', form=form)
+                    .then(function() {
+                        var success = true
+                          console.log('SUCCESS!');
+                    }, function(error) {
+                        var success = false
+                          console.log('FAILED...', error);
+                    });
+              });
+        }
+    </script>
+    <script src="js/index.js"></script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <nav class="navbar">
-        <img class='head-img' src="https://upload.wikimedia.org/wikipedia/commons/8/85/Logo-Test.png" alt="" srcset=""> 
-        <div class="links" id="links">
-            
-            <a>Contact</a>
-            <a>Gallery</a>
-            <a>About</a>
-            <a>Home</a>
-        </div>
-        <div class="dropdown">
-            <input type="checkbox" id="dropdown-check">
-            <label for="dropdown-check">
-                <i class="dropdown-btn fas fa-bars"></i>
-                <i class="dropdown-cancel fas fa-times"></i>
-                <div class="dropdown-content">
-                    <a>Contact</a>
-                    <a href="/gallery">Gallery</a>
-                    <a>About</a>
-                    <a>Home</a>
-                </div>
-            </label>
-        </div>
-       
-    </nav>
+    <header>
+        <nav class="navbar">
+            <img class='head-img' src="images/logo.png" alt="" srcset=""> 
+            <div class="links" id="links">
+                
+                <a href="gallery.html">Contact</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="gallery.html">About</a>
+                <a href="gallery.html">Home</a>
+            </div>
+            <div class="dropdown">
+                <input type="checkbox" id="dropdown-check">
+                <label for="dropdown-check">
+                    <i class="dropdown-btn fas fa-bars"></i>
+                    <i class="dropdown-cancel fas fa-times"></i>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Contact</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="gallery.html">About</a>
+                        <a href="gallery.html">Home</a>
+                    </div>
+                </label>
+            </div>
+        
+        </nav>
+    </header>
     <br>
     <main>
-        <div class=welcome>
+        <section class=welcome>
             <div class="glassism">
                 <img src="images/online-edu.png" alt="">
                 <p>Shiksha Tuition Center is unlike any other institute you will find. We focus on conceptual knowledge instead of making students mug up using the conventional ways. This institute situated in Delhi has teachers with more than 20 years of experience. We are equipped with the latest technologies when it comes to Virtual Classes, see our <a href="/gallery">Gallery</a> for more info.</p>
@@ -47,8 +76,147 @@
                 <span class="h1">Shiksha Tuition Center</span><br>
                 <p class="writeup">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores animi totam suscipit facere magnam consequatur quidem inventore, harum id quas itaque veritatis consectetur recusandae cumque corporis culpa nemo labore? Inventore!</p>
             </div>
+        </section>
+        <section class="specs1">
+            <div class="teachers">
+                <i class="fas fa-chalkboard-teacher"></i><br>
+                <span id="teacherC"></span>+<br><span class="text">Teachers</span>
+            </div>
+            <div class="students">
+                <i class="fas fa-user-graduate"></i><br>
+                <span id="studentC"></span>+<br><span class="text">Students</span>
+            </div>
+            <div class="experience">
+                <i class="fas fa-history"></i><br>
+                <span id="experienceC"></span>+<br><span class="text" style="font-size: 40px;">Years Of Experience</span>
+            </div>
+        </section>
+        <section class="specs2">
+            <div class="teachers">
+                <i class="fas fa-globe-americas"></i><br>
+                <span class="text" id="globe"></span>
+            </div>
+            <div class="students">
+                <i class="fas fa-network-wired"></i><br>
+                <span class="text" id="batches"></span>
+            </div>
+            <div class="experience">
+                <i class="fas fa-square-root-alt"></i><br>
+                <span class="text" id="maths" style="font-size: 40px;"></span>
+            </div>
+        </section>
+        <section class="students-say">
+            <span class="section-title">
+                <h2>What do our students say about us?</h2>
+            </span>
+            
+            
+            <div class="students-wrapper">
+                <div class="student first">
+                    <img src="images/student1.png" alt="Student 1">
+                    <div class="details">
+                        <span class="name">Student 1</span>
+                        <span class="review"><q><i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, at?</i></q></span> 
+                    </div>
+                </div>
+                <div class="student second">
+                    <img src="images/student1.png" alt="Student 2">
+                    <div class="details">
+                        <span class="name">Student 2</span>
+                        <span class="review"><q><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, hic.</i></q></span> 
+                    </div>
+                </div>
+                <div class="student third">
+                    <img src="images/student1.png" alt="Student 3">
+                    <div class="details">
+                        <span class="name">Student 3</span>
+                        <span class="review"><q><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, nesciunt.</i></q></span> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <div class="img one">
+                <img src="images/gallery1.jpeg" alt="image">
+            </div>
+            <div class="img two">
+                <img src="images/gallery2.jpeg" alt="image">
+            </div>
+            <div class="img three">
+                <img src="images/gallery3.jpeg" alt="image">
+            </div>
+            
+        </section>
+        Check out more in the <a href="gallery.html">gallery</a>.
+    </main>
+
+
+    <footer>
+        <div class="site-map">
+            <div class="I">
+                <i>Site Map</i> <br><br>
+                <i class="fas fa-angle-right"></i><a href="gallery.html"> Home</a><br>
+                <i class="fas fa-angle-right"></i><a href="gallery.html"> About</a><br>
+                <i class="fas fa-angle-right"></i><a href="gallery.html"> Gallery</a><br>
+                <i class="fas fa-angle-right"></i><a href="gallery.html"> Contact</a><br>
+            </div>
+            <div class="II">
+                <span class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="text"><span>98-B, Block CD</span> <span>Pitampura, New Delhi-10034</span></span><br>
+                </span>
+                <span class="mail">
+                    <i class="fas fa-envelope icon"></i><br>
+                    <span class="text"><span>bhawahuja@gmail.com</span> <span>tanishqahuja2@gmail.com</span></span><br>
+                </span>
+                <span class="phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="text"><span>9999496332</span> <span>9811668244</span></span><br>
+                </span>
+                
+            </div>
         </div>
         
-    </main>
+        <div class="logo">
+            <a href="/">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <div class="social">
+                Find us here:- <br>
+                <a href="https://www.google.com/search?client=opera&hs=31G&sxsrf=ALeKk02af8JrCxjd6CAwtP9R4079TGAyzA:1619172484327&q=shiksha%20tuition%20centre&spell=1&sa=X&ved=2ahUKEwiZ6IfGj5TwAhVhmeYKHTFdB0cQvS4wAHoECAUQNg&biw=1326&bih=674&tbs=lf:1,lf_ui:2&tbm=lcl&rflfq=1&num=10&rldimm=9298652769424178794&lqi=ChZzaGlrc2hhIHR1aXRpb24gY2VudHJlSIm09LirroCACFpGChZzaGlrc2hhIHR1aXRpb24gY2VudHJlEAAQARACGAAYARgCIhZzaGlrc2hhIHR1aXRpb24gY2VudHJlKggIAhAAEAEQApIBD2NvYWNoaW5nX2NlbnRlcg&rlst=f#rlfi=hd:;si:9298652769424178794,l,ChZzaGlrc2hhIHR1aXRpb24gY2VudHJlSIm09LirroCACFpGChZzaGlrc2hhIHR1aXRpb24gY2VudHJlEAAQARACGAAYARgCIhZzaGlrc2hhIHR1aXRpb24gY2VudHJlKggIAhAAEAEQApIBD2NvYWNoaW5nX2NlbnRlcg;mv:[[28.771934999999996,77.2859185],[28.4662167,77.00400859999999]]">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="https://www.google.com/maps/place/Shiksha+Tuition+Centre/@28.705112,77.1353805,17z/data=!3m1!4b1!4m9!1m3!11m2!2su46a1bazOHadIkwyWY18KkH6JPJC6g!3e2!3m4!1s0x390d03d79004549d:0x810b736d6b3afe6a!8m2!3d28.7050869!4d77.1375478">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="query-form">
+            <span class="subtitle">
+                Ask your query
+            </span>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="childname">Child's Name</label>
+                <input type="text" id="childname" name="childname" required><br>
+                <label for="standard">Standard</label>
+                <input type="number" id="standard" name="standard" required><br>
+                <label for="schoolname">School Name</label>
+                <input type="text" id="schoolname" name="schoolname" required><br>
+                <label for="phoneNum">Phone Number</label>
+                <input type="number" id="phoneNum" name="phoneNum" required><br>
+                <label for="query">Query</label>
+                <textarea name="query" id="query" cols="20" rows="10" required>Your Query Here</textarea>
+                <button class="send-btn" type="submit" id="send">Send</button>
+            </form>
+        </div>
+        
+    </footer>
+    <div class="copyrights">
+        Website By <a href="/">Shiksha Tuition Center</a><br>
+        &#169; All rights reserved 2021-2022
+    </div>
 </body>
 </html>
