@@ -1,0 +1,117 @@
+.from-owner{
+    border-radius: 27px;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255,0,247, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 30px;
+    display: grid;
+    grid-gap: 20px;
+    width: 85%;
+    margin-top: 40px;
+}
+.from-owner img{
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+}
+.from-owner .image{
+    grid-row: 1/span 2;
+    grid-column: 1/2;
+    width: 300px;
+    height: 300px;
+}
+.from-owner .section-title{
+    font-size: 60px;
+    font-weight: 600;
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.from-owner .review{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    font-size: 20px;
+}
+.where{
+    margin-top: 80px;
+}
+.where .map{
+    display: flex;
+    justify-content: center;
+}
+.where .section-title{
+    text-align: center;
+    margin: 20px;
+    font-size: 50px;
+    font-weight: 600;
+}
+.where .map #gmap_canvas{
+    overflow: hidden;
+    background:none !important;
+    height: 681px;
+    width: 1000px;
+    border: 5px groove rgb(11, 116, 20);
+    border-radius: 50px;
+}
+.enrollment{
+    margin-top: 300px;
+    text-align: center;
+}
+.enrollment .section-title{
+    font-size: 70px;
+    font-weight: 600;
+}
+.enrollment .section-subtitle{
+    font-size: 50px;
+}
+
+@media only screen and (max-width: 1000px){
+    .from-owner .image{
+        grid-row: 1/2;
+        grid-column: 1/2 ;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        border: 1px solid red;
+        height: fit-content;
+    }
+    .from-owner .image img{
+        height: 300px;
+        width: auto;
+    }
+    .from-owner .section-title{
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .from-owner .review{
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    .where .map #gmap_canvas{
+        width: 700px
+    }
+}
+@media only screen and (max-width: 640px){
+    .where .map #gmap_canvas{
+        width: 500px
+    }
+}
+@media only screen and (max-width: 500px){
+    .where .map #gmap_canvas{
+        width: 300px
+    }
+    .from-owner .image img{
+        height: 150px;
+        width: auto;
+    }
+    .from-owner{
+        width: 70%;
+    }
+    .from-owner .section-title{
+        font-size: 50px;
+    }
+    .from-owner .review{
+        font-size: 20px;
+    }
+}
