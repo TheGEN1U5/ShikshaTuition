@@ -4,9 +4,229 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script src="https://kit.fontawesome.com/7d37d5d745.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script src="js/write-and-delete-master/dist/lib.js"></script>
+    <script type="text/javascript">
+        (function() {
+              // https://dashboard.emailjs.com/admin/integration
+              emailjs.init("user_XAc3BDZ0iRBpKvt21ckjZ");
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            var form = document.querySelector('#contact-form')
+            console.log(form)
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                var form = document.querySelector('#contact-form')
+                emailjs.sendForm('service_td6g3ue', 'template_9qu0qns', form=form)
+                .then(function() {
+                    var success = true
+                        console.log('SUCCESS!');
+                        alert('Query Received')
+                }, function(error) {
+                    var success = false
+                        console.log('FAILED...', error);
+                });
+            });
+            var form = document.querySelector('#contact-form2')
+            console.log(form)
+            document.getElementById('contact-form2').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                var form = document.querySelector('#contact-form2')
+                emailjs.sendForm('service_td6g3ue', 'template_9qu0qns', form=form)
+                .then(function() {
+                    var success = true
+                        console.log('SUCCESS!');
+                        alert('Query Received')
+                }, function(error) {
+                    var success = false
+                        console.log('FAILED...', error);
+                });
+            });
+            var form = document.querySelector('#apply-form')
+            console.log(form)
+            document.getElementById('apply-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // these IDs from the previous steps
+                var form = document.querySelector('#apply-form')
+                emailjs.sendForm('service_td6g3ue', 'template_t47nbpc', form=form)
+                .then(function() {
+                    var success = true
+                        console.log('SUCCESS!');
+                        alert('Query Received')
+                }, function(error) {
+                    var success = false
+                        console.log('FAILED...', error);
+                });
+            });
+        }
+    </script>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <img class='head-img' src="images/logo.png" alt="" srcset=""> 
+            <div class="links" id="links">
+                
+                <a href="contact.html" class="active">Contact</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="index.html">Home</a>
+            </div>
+            <div class="dropdown">
+                <input type="checkbox" id="dropdown-check">
+                <label for="dropdown-check">
+                    <i class="dropdown-btn fas fa-bars"></i>
+                    <i class="dropdown-cancel fas fa-times"></i>
+                    <div class="dropdown-content">
+                        <a href="contact.html" class="active">Contact</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="about.html">About</a>
+                        <a href="index.html">Home</a>
+                    </div>
+                </label>
+            </div>
+        
+        </nav>
+    </header>
+    <br>
+    <main> 
+        <section class="enrollment">
+            <div class="section-title">
+                Get your child enrolled today!
+            </div>
+            <div class="section-subtitle">
+                Send us your query and get a reply!
+            </div><br>
+            <div class="enroll-form">
+                <form id="contact-form2">
+                    <label for="name2">Name</label>
+                    <input type="text" id="name2" name="name" required><br>
+                    <label for="childname2">Child's Name</label>
+                    <input type="text" id="childname2" name="childname" required><br>
+                    <label for="standard2">Standard</label>
+                    <input type="number" id="standard2" name="standard" required><br>
+                    <label for="schoolname2">School Name</label>
+                    <input type="text" id="schoolname2" name="schoolname" required><br>
+                    <label for="phoneNum2">Phone Number</label>
+                    <input type="number" id="phoneNum2" name="phoneNum" required><br>
+                    <label for="query2">Query</label>
+                    <textarea name="query" id="query2" cols="20" rows="10" required>Your Query Here</textarea>
+                    <button class="send-btn" type="submit" id="send2">Send</button>
+                </form>
+            </div>
+        </section>
+        <br><br><br><br>
+        <section class="job-apply">
+            <div class="section-title">
+                Looking for teaching jobs?
+            </div>
+            <div class="section-subtitle">
+                Send us your details and get a reply from us!
+            </div>
+            <div class="apply-form">
+                <form id="apply-form">
+                    <label for="name_apply">Name</label>
+                    <input type="text" name="name_apply" id="name_apply">
+                    <label for="age_apply">Age</label>
+                    <input type="number" name="age_apply" id="age_apply">
+                    <label for="mail_apply">E-mail</label>
+                    <input type="email" name="mail_apply" id="mail_apply">
+                    <label for="phoneNum_apply">Phone Number</label>
+                    <input type="tel" name="phoneNum_apply" id="phoneNum_apply">
+                    <label for="yoe_apply">Years Of Experience</label>
+                    <input type="text" name="yoe_apply" id="yoe_apply">
+                    <label for="cph_apply">Preferred Charge Per Hour (in &#8377;)</label>
+                    <input type="number" name="cph_apply" id="cph_apply">
+                    <label for="subj_apply">Preferred Subject of teaching</label>
+                    <input type="text" name="subj_apply" id="subj_apply">
+                    <label for="linkResume_apply">Link to your resume (if any)</label>
+                    <input type="text" name="linkResume_apply" id="linkResumeapply">
+                    <button class="send-btn" type="submit" id="send3">Send</button>
+                </form>
+            </div>
+        </section>
+        <section class="email">
+            Feel free to mail us at <a href="mailto:shikshatuitioncenter@gmail.com">shikshatuitioncenter@gmail.com</a> or call at <a href="tel:+919811668244">9811668244</a> during business hours.
+        </section>
+    </main>
+    <div class="footer-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#18FDA5" fill-opacity="1" d="M0,0L34.3,48C68.6,96,137,192,206,197.3C274.3,203,343,117,411,117.3C480,117,549,203,617,197.3C685.7,192,754,96,823,80C891.4,64,960,128,1029,181.3C1097.1,235,1166,277,1234,256C1302.9,235,1371,149,1406,106.7L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+    </div>
+    <footer>
+        <div class="site-map">
+            <div class="I">
+                <i>Site Map</i> <br><br>
+                <i class="fas fa-angle-right"></i><a href="index.html"> Home</a><br>
+                <i class="fas fa-angle-right"></i><a href="about.html"> About</a><br>
+                <i class="fas fa-angle-right"></i><a href="gallery.html"> Gallery</a><br>
+                <i class="fas fa-angle-right"></i><a href="contact.html"> Contact</a><br>
+            </div>
+            <div class="II">
+                <span class="location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="text"><span>98-B, Block CD</span> <span>Pitampura, New Delhi-10034</span></span><br>
+                </span>
+                <span class="mail">
+                    <i class="fas fa-envelope icon"></i><br>
+                    <span class="text"><span>bhawahuja@gmail.com</span> <span>tanishqahuja2@gmail.com</span></span><br>
+                </span>
+                <span class="phone">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="text"><span>9999496332</span> <span>9811668244</span></span><br>
+                </span>
+                
+            </div>
+        </div>
+        
+        <div class="logo">
+            <a href="/">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <div class="social">
+                Find us here:- <br>
+                <a href="https://www.google.com/search?client=opera&hs=31G&sxsrf=ALeKk02af8JrCxjd6CAwtP9R4079TGAyzA:1619172484327&q=shiksha%20tuition%20centre&spell=1&sa=X&ved=2ahUKEwiZ6IfGj5TwAhVhmeYKHTFdB0cQvS4wAHoECAUQNg&biw=1326&bih=674&tbs=lf:1,lf_ui:2&tbm=lcl&rflfq=1&num=10&rldimm=9298652769424178794&lqi=ChZzaGlrc2hhIHR1aXRpb24gY2VudHJlSIm09LirroCACFpGChZzaGlrc2hhIHR1aXRpb24gY2VudHJlEAAQARACGAAYARgCIhZzaGlrc2hhIHR1aXRpb24gY2VudHJlKggIAhAAEAEQApIBD2NvYWNoaW5nX2NlbnRlcg&rlst=f#rlfi=hd:;si:9298652769424178794,l,ChZzaGlrc2hhIHR1aXRpb24gY2VudHJlSIm09LirroCACFpGChZzaGlrc2hhIHR1aXRpb24gY2VudHJlEAAQARACGAAYARgCIhZzaGlrc2hhIHR1aXRpb24gY2VudHJlKggIAhAAEAEQApIBD2NvYWNoaW5nX2NlbnRlcg;mv:[[28.771934999999996,77.2859185],[28.4662167,77.00400859999999]]">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="https://www.google.com/maps/place/Shiksha+Tuition+Centre/@28.705112,77.1353805,17z/data=!3m1!4b1!4m9!1m3!11m2!2su46a1bazOHadIkwyWY18KkH6JPJC6g!3e2!3m4!1s0x390d03d79004549d:0x810b736d6b3afe6a!8m2!3d28.7050869!4d77.1375478">
+                    <i class="fas fa-map-marker-alt"></i>
+                </a>
+            </div>
+        </div>
+        
+        <div class="query-form">
+            <span class="subtitle">
+                Ask your query
+            </span>
+            <form id="contact-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="childname">Child's Name</label>
+                <input type="text" id="childname" name="childname" required><br>
+                <label for="standard">Standard</label>
+                <input type="number" id="standard" name="standard" required><br>
+                <label for="schoolname">School Name</label>
+                <input type="text" id="schoolname" name="schoolname" required><br>
+                <label for="phoneNum">Phone Number</label>
+                <input type="number" id="phoneNum" name="phoneNum" required><br>
+                <label for="query">Query</label>
+                <textarea name="query" id="query" cols="20" rows="10" required>Your Query Here</textarea>
+                <button class="send-btn" type="submit" id="send">Send</button>
+            </form>
+        </div>
+        
+    </footer>
+    <div class="copyrights">
+        Website By <a href="/">Shiksha Tuition Center</a><br>
+        &#169; All rights reserved 2021-2022
+    </div>
 </body>
 </html>

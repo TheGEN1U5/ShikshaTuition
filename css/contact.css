@@ -1,0 +1,69 @@
+.enrollment{
+    background: rgba( 0, 255, 49, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 10.0px );
+    -webkit-backdrop-filter: blur( 10.0px );
+    border-radius: 40px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px;
+    text-align: center;
+}
+.section-title{
+    font-size: 70px;
+    font-weight: 600;
+}
+.section-subtitle{
+    font-size: 50px;
+}
+.enrollment .enroll-form , .job-apply .apply-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.enrollment form , .job-apply form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: orange;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 250px;
+    font-size: 20px;
+}
+.job-apply{
+    background: rgba( 254, 1, 1, 0.35 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 17.5px );
+    -webkit-backdrop-filter: blur( 17.5px );
+    border-radius: 40px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 40px;
+    text-align: center;
+}
+.job-apply form{
+    background-color: lightgreen;
+    font-size: 20px;
+}
+.job-apply form label{
+    margin: 5px 0;
+}
+.enrollment .enroll-form input[type='text'] , .enrollment .enroll-form input[type='number'] , .enrollment .enroll-form textarea{
+    border-radius: 10px;
+    padding: 5px;
+    width: 95%;
+}
+.job-apply .apply-form input{
+    border-radius: 10px;
+    padding: 5px;
+    width: 95%;
+}
+.email{
+    text-align: center;
+    margin-top: 90px;
+    font-size: 40px;
+}

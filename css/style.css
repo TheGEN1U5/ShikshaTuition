@@ -143,12 +143,17 @@ body{
 
 footer{
     display: grid;
-    margin-top: 500px;
-    background: rgba( 9, 255, 216, 0.55 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    background: rgb(24, 253, 165);
+    /* box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 ); */
     backdrop-filter: blur( 17.0px );
     -webkit-backdrop-filter: blur( 17.0px );
     padding: 20px 70px 20px 70px;
+    margin: 0;
+    border: 0;
+}
+.footer-wave{
+    margin-top: 500px;
+    margin-bottom: 0;
 }
 footer .site-map{
     grid-row-start: 1;
@@ -321,7 +326,6 @@ footer a{
 footer a:hover{
     color: rgb(104, 0, 118)
 }
-
 
 .specs1, .specs2{
     display: flex;
