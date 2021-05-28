@@ -7,6 +7,7 @@
     <meta name="keywords" content="shiksha tuition center website, Shiksha Tuition Center, tuitions in delhi, tuitions in pitampura, tuitions near me, tuition center near me, maths classes in pitampura, maths classes in delhi, maths classes near me, tuition center in delhi, shiksha tuition center in delhi, shiksha tuition center near me">
     <title>Shiksha Tuition Center</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slideshow.css">
     <script src="https://kit.fontawesome.com/7d37d5d745.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="js/write-and-delete-master/dist/lib.js"></script>
@@ -96,7 +97,7 @@
         </section>
         <section class="specs2">
             <div class="teachers">
-                <i class="fas fa-globe-americas"></i><br>
+                <i class="fas fa-video"></i><br>
                 <span class="text" id="globe"></span>
             </div>
             <div class="students">
@@ -110,51 +111,81 @@
         </section>
         <section class="students-say">
             <span class="section-title">
-                <h2>What do our students say about us?</h2>
+                <h2>What do the parents say about us?</h2>
             </span>
             
             
-            <div class="students-wrapper">
-                <div class="student first">
-                    <img src="images/student1.png" alt="Student 1">
+            <div class="students-wrapper slideshow-container">
+                <div class="student parent first fade">
+                    <img src="images/parent1.jpeg" alt="Parent 1">
                     <div class="details">
-                        <span class="name">Student 1</span>
-                        <span class="review"><q><i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, at?</i></q></span> 
+                        <span class="name">Neetu Takroo</span>
+                        <span class="review"><q><i>Bhawya ma'am is one of the best teachers I have met. Shiksha Tuition Centre has a wonderful commitment with every child for improved performance. She pays comprehensive attention to not just learning through books but also overall personality. I am always informed about my child’s performance with areas of improvement. Everyone I referred also had the same wonderful review about Shiksha Tuition Centre. Glad to have found her.</i></q></span> 
                     </div>
                 </div>
-                <div class="student second">
+                <div class="student parent second fade">
                     <img src="images/student1.png" alt="Student 2">
                     <div class="details">
-                        <span class="name">Student 2</span>
+                        <span class="name">Parent 2</span>
                         <span class="review"><q><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, hic.</i></q></span> 
                     </div>
                 </div>
-                <div class="student third">
+                <div class="student parent third fade">
                     <img src="images/student1.png" alt="Student 3">
                     <div class="details">
-                        <span class="name">Student 3</span>
+                        <span class="name">Parent 3</span>
                         <span class="review"><q><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, nesciunt.</i></q></span> 
                     </div>
                 </div>
+                <a class="prev" onclick="plusSlidesReview(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlidesReview(1)">&#10095;</a>
+            </div>
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dotReview" onclick="currentSlideReview(1)"></span>
+                <span class="dotReview" onclick="currentSlideReview(2)"></span>
+                <span class="dotReview" onclick="currentSlideReview(3)"></span>
             </div>
         </section>
+        <br><br><br>
         <section class="gallery">
-            <div class="img one">
-                <img src="images/gallery1.jpeg" alt="image">
+            <!-- Slideshow container -->
+            <div class="students-wrapper slideshow-container">
+
+                <!-- Full-width images with number and caption text -->
+                <div class="mySlides fade img1">
+                    <img src="images/gallery1.jpeg" style="width:100%">
+                </div>
+            
+                <div class="mySlides fade">
+                    <img src="images/gallery2.jpeg" style="width:100%">
+                </div>
+            
+                <div class="mySlides fade">
+                    <img src="images/gallery3.jpeg" style="width:100%">
+                </div>
+            
+                <!-- Next and previous buttons -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
-            <div class="img two">
-                <img src="images/gallery2.jpeg" alt="image">
-            </div>
-            <div class="img three">
-                <img src="images/gallery3.jpeg" alt="image">
+            <br>
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
             </div>
             <span class="section-title">
-                Check out more in the <a href="gallery.html">gallery</a>.
+                Check out more in the <a href="gallery.html"> gallery</a> 
             </span>
         </section>
     </main>
     <div class="footer-wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#18FDA5" fill-opacity="1" d="M0,0L34.3,48C68.6,96,137,192,206,197.3C274.3,203,343,117,411,117.3C480,117,549,203,617,197.3C685.7,192,754,96,823,80C891.4,64,960,128,1029,181.3C1097.1,235,1166,277,1234,256C1302.9,235,1371,149,1406,106.7L1440,64L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"></path></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#18FDA5" fill-opacity="1" d="M0,160L40,165.3C80,171,160,181,240,202.7C320,224,400,256,480,240C560,224,640,160,720,165.3C800,171,880,245,960,234.7C1040,224,1120,128,1200,101.3C1280,75,1360,117,1400,138.7L1440,160L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+        </svg>
     </div>
     <footer>
         <div class="site-map">
@@ -168,15 +199,15 @@
             <div class="II">
                 <span class="location">
                     <i class="fas fa-map-marker-alt"></i>
-                    <span class="text"><span>98-B, Block CD</span> <span>Pitampura, New Delhi-10034</span></span><br>
+                    <span class="text"><span>Block CD</span> <span>Pitampura, New Delhi-110034</span></span><br>
                 </span>
                 <span class="mail">
                     <i class="fas fa-envelope icon"></i><br>
-                    <span class="text"><span>bhawahuja@gmail.com</span> <span>tanishqahuja2@gmail.com</span></span><br>
+                    <span class="text"><span>contactshikshatuitioncenter</span> <span>@gmail.com</span></span><br>
                 </span>
                 <span class="phone">
                     <i class="fas fa-phone-alt"></i>
-                    <span class="text"><span>9999496332</span> <span>9811668244</span></span><br>
+                    <span class="text"><span>9811668244</span><br>
                 </span>
                 
             </div>
@@ -193,6 +224,12 @@
                 </a>
                 <a href="https://www.google.com/maps/place/Shiksha+Tuition+Centre/@28.705112,77.1353805,17z/data=!3m1!4b1!4m9!1m3!11m2!2su46a1bazOHadIkwyWY18KkH6JPJC6g!3e2!3m4!1s0x390d03d79004549d:0x810b736d6b3afe6a!8m2!3d28.7050869!4d77.1375478">
                     <i class="fas fa-map-marker-alt"></i>
+                </a><br>
+                <a href="https://wa.me/message/LK3BYSCUYU7AM1" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook"></i>
                 </a>
             </div>
         </div>

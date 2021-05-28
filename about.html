@@ -7,7 +7,9 @@
     <title>About Us</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/slideshow.css">
     <script src="https://kit.fontawesome.com/7d37d5d745.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="js/write-and-delete-master/dist/lib.js"></script>
     <script type="text/javascript">
@@ -99,28 +101,32 @@
             </span>
             
             
-            <div class="students-wrapper">
-                <div class="student first">
-                    <img src="images/student1.png" alt="Student 1">
+            <div class="students-wrapper slideshow-container">
+                <div class="student first mySlides fade img1">
+                    <img src="images/student1.jpeg" alt="Student 1">
                     <div class="details">
-                        <span class="name">Student 1</span>
-                        <span class="review"><q><i>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, at?</i></q></span> 
+                        <span class="name">Yogesh Rajani</span>
+                        <span class="review"><q><i>
+                            Bhawya madam's manner of teaching is really wonderful and refreshing! She’s patient and supportive, and really knows how to motivate her students. She’s great at building confidence and keeping lessons fun and engaging through a variety of activities that improve conversation, writing, and reading skills.
+                        </i></q></span> 
                     </div>
                 </div>
-                <div class="student second">
+                <div class="student second mySlides fade">
                     <img src="images/student1.png" alt="Student 2">
                     <div class="details">
-                        <span class="name">Student 2</span>
-                        <span class="review"><q><i>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, hic.</i></q></span> 
+                        <span class="name">Vani Manuja</span>
+                        <span class="review"><q><i>The best part about Shiksha Tuition Center is the cordial atmosphere, everyone there is so friendly and always ready to help. The teachers are awesome and they have a unique style of teaching! I will recommend Shiksha Tuition Center to all my friends. </i></q></span> 
                     </div>
                 </div>
-                <div class="student third">
+                <div class="student third mySlides fade">
                     <img src="images/student1.png" alt="Student 3">
                     <div class="details">
                         <span class="name">Student 3</span>
                         <span class="review"><q><i>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, nesciunt.</i></q></span> 
                     </div>
                 </div>
+                <a class="prev" onclick="plusSlides(-1)" style="left: 0;">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
         </section>
         <section class="enrollment">

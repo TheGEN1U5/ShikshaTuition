@@ -31,7 +31,7 @@ window.onload = function(){
             const obj4 = document.getElementById('globe')
             const obj5 = document.getElementById('batches')
             const obj6 = document.getElementById('maths')
-            animateChar(obj4, 'Global Reach');
+            animateChar(obj4, 'Online Classes');
             animateChar(obj5, 'Small Batches');
             animateChar(obj6, 'Special Maths Classes');
         } else {
@@ -62,4 +62,77 @@ window.onload = function(){
     let animateChar = (obj, text) => {
         writeAndDelete(obj,[text],{ timeout:100 , speed:100 })
     }
+
+    
+}
+
+
+
+
+
+
+//review carousel
+
+var slideIndexReview = 1;
+var slideIndex = 1;
+showSlidesReview(slideIndexReview);
+
+// Next/previous controls
+function plusSlidesReview(n) {
+    showSlidesReview(slideIndexReview += n);
+}
+
+// Thumbnail image controls
+function currentSlideReview(n) {
+    showSlidesReview(slideIndexReview = n);
+}
+
+function showSlidesReview(n) {
+    var i;
+    var slidesReview = document.getElementsByClassName("parent");
+    var dotsReview = document.getElementsByClassName("dotReview");
+    if (n > slidesReview.length) {slideIndexReview = 1}
+    if (n < 1) {slideIndexReview = slidesReview.length}
+    for (i = 0; i < slidesReview.length; i++) {
+        slidesReview[i].style.display = "none";
+    }
+    for (i = 0; i < dotsReview.length; i++) {
+        dotsReview[i].className = dotsReview[i].className.replace(" active", "");
+    }
+    slidesReview[slideIndexReview-1].style.display = "grid";
+    dotsReview[slideIndexReview-1].className += " active";
+}
+
+
+
+// Slideshow
+
+showSlides(slideIndex);
+
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    console.log('showing'+n);
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "grid";
+    dots[slideIndex-1].className += " active";
 }
