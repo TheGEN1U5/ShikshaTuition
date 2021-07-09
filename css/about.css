@@ -73,7 +73,6 @@
         display: flex;
         justify-content: center;
         width: 100%;
-        border: 1px solid red;
         height: fit-content;
     }
     .from-owner .image img{
