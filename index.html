@@ -47,23 +47,30 @@
                 <a href="contact.html">Contact</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About</a>
-                <a href="index.html" class="active">Home</a>
+                <a href="index.html" class="active-nav">Home</a>
             </div>
-            <div class="dropdown">
-                <input type="checkbox" id="dropdown-check">
-                <label for="dropdown-check">
-                    <i class="dropdown-btn fas fa-bars"></i>
-                    <i class="dropdown-cancel fas fa-times"></i>
-                    <div class="dropdown-content">
-                        <a href="contact.html">Contact</a>
-                        <a href="gallery.html">Gallery</a>
-                        <a href="about.html">About</a>
-                        <a href="index.html" class="active">Home</a>
-                    </div>
-                </label>
-            </div>
-        
+            <span class ="open-button" onclick="openNav()">&#9776;</span>
         </nav>
+        <div class="overlay" id="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="contact.html">Contact</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="index.html" class="active-nav">Home</a>    
+            </div>
+        </div>
+        
+
+        <script>
+            function openNav() {
+                document.getElementById("overlay").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("overlay").style.width = "0%";
+            }
+        </script>
     </header>
     <br>
     <main>
@@ -78,7 +85,7 @@
                 
                 <span class=h3>Welcome To</span>
                 <span class="h1">Shiksha Tuition Center</span><br>
-                <p class="writeup">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores animi totam suscipit facere magnam consequatur quidem inventore, harum id quas itaque veritatis consectetur recusandae cumque corporis culpa nemo labore? Inventore!</p>
+                <p class="writeup">Shiksha Tuition Center provides best-in-class education in a fun way to its children. STC's experienced teachers make lessons more engaging and interactive without stressing or burdening the child. Here, children learn without any pressure in the cordial atmosphere and can gain most of the concepts. With weekly MCQ and Subjective tests, students review and brush up on their concepts congruously. On the other hand, children in the elementary grade are kept engaged in Personality Development Saturday Activities in which they are emboldened to perform and acquire positions.</p>
             </div>
         </section>
         <section class="specs1">

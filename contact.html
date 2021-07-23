@@ -76,26 +76,33 @@
             <img class='head-img' src="images/logo.png" alt="" srcset=""> 
             <div class="links" id="links">
                 
-                <a href="contact.html" class="active">Contact</a>
+                <a href="contact.html" class="active-nav">Contact</a>
                 <a href="gallery.html">Gallery</a>
                 <a href="about.html">About</a>
                 <a href="index.html">Home</a>
             </div>
-            <div class="dropdown">
-                <input type="checkbox" id="dropdown-check">
-                <label for="dropdown-check">
-                    <i class="dropdown-btn fas fa-bars"></i>
-                    <i class="dropdown-cancel fas fa-times"></i>
-                    <div class="dropdown-content">
-                        <a href="contact.html" class="active">Contact</a>
-                        <a href="gallery.html">Gallery</a>
-                        <a href="about.html">About</a>
-                        <a href="index.html">Home</a>
-                    </div>
-                </label>
-            </div>
-        
+            <span class ="open-button" onclick="openNav()">&#9776;</span>
         </nav>
+        <div class="overlay" id="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                <a href="contact.html" class="active-nav">Contact</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="index.html">Home</a>    
+            </div>
+        </div>
+        
+
+        <script>
+            function openNav() {
+                document.getElementById("overlay").style.width = "100%";
+            }
+
+            function closeNav() {
+                document.getElementById("overlay").style.width = "0%";
+            }
+        </script>
     </header>
     <br>
     <main> 

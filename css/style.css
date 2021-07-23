@@ -68,7 +68,7 @@ body{
     transform: scale(1.1);
     color: #3c27c2 !important;
 }
-.active{
+.active-nav{
     color: #3c27c2 !important;
 }
 .welcome{
@@ -475,6 +475,9 @@ footer a:hover{
     }
 }
 @media only screen and (max-width: 950px){
+    .open-button{
+        display: block !important;
+    }
     .navbar{
         display: flex;
         flex-direction: column;
@@ -586,4 +589,49 @@ button:focus{
 .footer-wave{
     display: flex;
     
+}
+.open-button{
+    font-size:30px;
+    cursor:pointer;
+    display: none;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(84, 216, 214, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #9d2020;
+    font-weight: 600;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
 }
