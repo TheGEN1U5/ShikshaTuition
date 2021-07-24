@@ -569,10 +569,12 @@ footer a:hover{
     }
     .gallery img{
         width: auto;
-        max-height: 150px;
     }
     .footer{
         padding: 20px;
+    }
+    .mySlides{
+        height: fit-content;
     }
 } 
 
