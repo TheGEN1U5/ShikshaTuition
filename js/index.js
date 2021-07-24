@@ -10,7 +10,7 @@ window.onload = function(){
             const obj2 = document.getElementById('studentC')
             const obj3 = document.getElementById('experienceC')
             animateValue(obj1, 0, 2, 1000);
-            animateValue(obj2, 0, 50, 1000);
+            animateValue(obj2, 0, 500, 1000);
             animateValue(obj3, 0, 20, 1000);
         } else {
             console.log('out of view');
