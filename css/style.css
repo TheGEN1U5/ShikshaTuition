@@ -526,7 +526,8 @@ footer a:hover{
         display: none;
     }
     .navbar .head-img{
-        min-width: 300px !important;
+        min-width: 250px !important;
+        height: auto !important;
     }
     .navbar .links{
         display: none;
@@ -593,7 +594,7 @@ button:focus{
     
 }
 .open-button{
-    font-size:30px;
+    font-size:20px;
     cursor:pointer;
     display: none;
 }
