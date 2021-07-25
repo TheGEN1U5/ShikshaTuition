@@ -44,6 +44,28 @@ window.onload = function(){
         observer2.observe(text);
     });
 
+    //Observer3
+    const elems3 = document.querySelectorAll('.specs3');
+    observer3 = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.intersectionRatio > 0) {
+        console.log('in the view');
+            const obj7 = document.getElementById('pocket')
+            const obj8 = document.getElementById('nursery')
+            const obj9 = document.getElementById('classes')
+            animateChar(obj7, 'Pocket Friendly');
+            animateChar(obj8, 'Special Nursery Batches');
+            animateChar(obj9, 'Classes I to VIII');
+        } else {
+            console.log('out of view');
+        }
+    });
+    });
+
+    elems3.forEach(text => {
+        observer3.observe(text);
+    });
+
     //Anim Funcs
 
     let animateValue = (obj, start, end, duration) => {
