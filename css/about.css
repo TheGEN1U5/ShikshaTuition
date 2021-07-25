@@ -33,6 +33,10 @@
     grid-column: 2/3;
     font-size: 20px;
 }
+.from-owner .quote{
+    text-align: center !important;
+    font-size: 25px;
+}
 .where{
     margin-top: 80px;
 }
