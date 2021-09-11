@@ -401,7 +401,80 @@ footer a:hover{
     text-align: center;
     font-size: 20px;
 }
+input:focus{
+    outline: none;
+}
+a:focus{
+    outline: none;
+}
+button:focus{
+    outline: none;
+}
+.footer-wave{
+    display: flex;
+    
+}
+.open-button{
+    font-size:20px;
+    cursor:pointer;
+    display: none;
+}
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(84, 216, 214, 0.8);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
 
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #9d2020;
+    font-weight: 600;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+.loader {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgb(77,209,189);
+    background: linear-gradient(40deg, rgba(77,209,189,1) 6%, rgba(77,209,189,1) 12%, rgba(154,221,135,1) 20%, rgba(230,233,81,1) 32%, rgba(255,237,63,1) 55%, rgba(244,197,111,1) 72%, rgba(252,176,40,1) 81%, rgba(252,171,38,1) 92%, rgba(251,152,31,1) 96%);
+    z-index: 10;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+.loader img{
+    height: 40%;
+    width: auto;
+}
 @media only screen and (max-width: 876px){
     body{
     background-repeat: no-repeat;
@@ -449,6 +522,10 @@ footer a:hover{
     }
 }
 @media only screen and (max-width: 500px){
+    .loader img{
+        height: 20%;
+        width: auto;
+    }
     .specs1, .specs2, .specs3{
         padding: 10px;
     }
@@ -580,61 +657,3 @@ footer a:hover{
 } 
 
 
-input:focus{
-    outline: none;
-}
-a:focus{
-    outline: none;
-}
-button:focus{
-    outline: none;
-}
-.footer-wave{
-    display: flex;
-    
-}
-.open-button{
-    font-size:20px;
-    cursor:pointer;
-    display: none;
-}
-.overlay {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgba(84, 216, 214, 0.8);
-    overflow-x: hidden;
-    transition: 0.5s;
-}
-
-.overlay-content {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-}
-
-.overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #9d2020;
-    font-weight: 600;
-    display: block;
-    transition: 0.3s;
-}
-
-.overlay a:hover, .overlay a:focus {
-    color: #f1f1f1;
-}
-
-.overlay .closebtn {
-    position: absolute;
-    top: 20px;
-    right: 45px;
-    font-size: 60px;
-}

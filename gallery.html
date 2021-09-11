@@ -8,6 +8,7 @@
     <title>STC gallery</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gallery.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7d37d5d745.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script src="js/write-and-delete-master/dist/lib.js"></script>
@@ -39,6 +40,14 @@
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
+    <script>  
+        $(window).on('load', function () {  
+            $(".loader").delay(2000).fadeOut("slow");  
+        });  
+    </script>
+    <div class="loader">
+        <img src="images/abc.gif" alt="loader">
+    </div>
     <header>
         <nav class="navbar">
             <img class='head-img' src="images/logo.png" alt="" srcset=""> 
