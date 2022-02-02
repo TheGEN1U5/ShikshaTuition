@@ -31,7 +31,7 @@ window.onload = function(){
             const obj4 = document.getElementById('globe')
             const obj5 = document.getElementById('batches')
             const obj6 = document.getElementById('maths')
-            animateChar(obj4, 'Online Classes');
+            animateChar(obj4, 'International Reach');
             animateChar(obj5, 'Small Batches');
             animateChar(obj6, 'Special Maths Classes');
         } else {
